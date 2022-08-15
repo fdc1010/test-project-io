@@ -1,0 +1,531 @@
+id: RsYfNSPaS0-5nPv9x9jaMw
+projectId: _nOC1sdL70C-220oRRIwhQ
+projectName: My first Project
+created: 2022-08-15T16:19:56.0485450Z
+protocol: 1
+tests:
+- id: JwGH0GDPFk6fQUU33E482w
+  name: My First Test
+  description: A demo test that performs some basic operations and validation
+  platform: Web
+  type: Web
+  driverType: Chrome
+  version: 1.0
+  creationDate: 2022-08-15T12:55:27.0000000
+  modificationDate: 2022-08-15T12:55:27.0000000
+  settings:
+    automationAssistant: true
+    appId: R8GE03daJUiumFTv1xxekg
+    stepSleepTime: 500
+    stepTimeout: 15000
+    stepSleepTiming: Before
+    stepFailureBehaviorType: Abort
+    stepTakeScreenshotConditionType: Failure
+  application:
+    id: R8GE03daJUiumFTv1xxekg
+    name: TestProject Example
+    description: TestProject example web application
+    url: https://example.testproject.io/web/
+    platform: Web
+  steps:
+  - id: by9uC0eJVkynpyFt2yskKA
+    comments: Navigates the specified URL (Auto-generated)
+    enabled: true
+    invertResult: false
+    order: 1
+    repeat: 1
+    type: Action
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 49c5d8d8-4ba8-42f0-823d-702e6acfb23a
+      source: System
+    parameterMaps:
+    - name: url
+      value: '{{ApplicationURL}}'
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: qNwmQAfIlESfUzhXeubO1w
+    comments: Focusing on the full name input
+    enabled: true
+    invertResult: false
+    order: 2
+    repeat: 1
+    type: Action
+    elementId: YfGUkss7k0WRcdfG2iy0_A
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 02d572b2-d610-4700-9ad3-40076ddb9807
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  - id: 4pw6-y5H-0qysXowkgHr7w
+    comments: Entering user full name
+    enabled: true
+    invertResult: false
+    order: 3
+    repeat: 1
+    type: Action
+    elementId: YfGUkss7k0WRcdfG2iy0_A
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 6f94fdaa-0041-4265-b73b-ecfcbe702d66
+      source: System
+    parameterMaps:
+    - name: keys
+      value: '{{Name}}'
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: Ei0-uhRMJ0GLj8lOOg08sA
+    comments: Focusing on the password input
+    enabled: true
+    invertResult: false
+    order: 4
+    repeat: 1
+    type: Action
+    elementId: QZHtJUtAe0aCYVW3NDkPQw
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 02d572b2-d610-4700-9ad3-40076ddb9807
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  - id: f9NXqqRCm0C2smXZLFKCzQ
+    comments: Entering the password
+    enabled: true
+    invertResult: false
+    order: 5
+    repeat: 1
+    type: Action
+    elementId: QZHtJUtAe0aCYVW3NDkPQw
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 6f94fdaa-0041-4265-b73b-ecfcbe702d66
+      source: System
+    parameterMaps:
+    - name: keys
+      value: '{{Password}}'
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: 6MNTqhriSEGoWHaRE2oEjg
+    comments: Clicking the login button
+    enabled: true
+    invertResult: false
+    order: 6
+    repeat: 1
+    type: Action
+    elementId: 4BJgGBvybEm2IQLvxynX3Q
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 02d572b2-d610-4700-9ad3-40076ddb9807
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  - id: oxcoQ-pMR0abOP-daw0f0A
+    comments: Validating that the login was successful
+    enabled: true
+    invertResult: false
+    order: 7
+    repeat: 1
+    type: Action
+    elementId: m0aL6AX3i0G0EyNF-HdeeQ
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 5e4cb36f-7757-4d63-8216-ba4e69496416
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  - id: o2zBapvMWkiA6icfzRPk7A
+    comments: Reading the greeting to validate user name is there
+    enabled: true
+    invertResult: false
+    order: 8
+    repeat: 1
+    type: Action
+    elementId: ziZh-m39kkWua5tGPofxUQ
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 225caec3-3231-45d5-a3f3-c4c59b7ab385
+      source: System
+    parameterMaps:
+    - name: text
+      value: ''
+      direction: Output
+    conditions: []
+    validations:
+    - type: Contains
+      invert: false
+      field: text
+      value: Hello {{Name}}, let's complete the test form
+    contexts: []
+  - id: QXn41u8cTUWxbuDGSOCEZg
+    comments: Selecting country
+    enabled: true
+    invertResult: false
+    order: 9
+    repeat: 1
+    type: Action
+    elementId: fduKCtriiU-eW5ZPib7JHQ
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 45fdd921-b359-4d6a-b7c5-5f9a3612c0f2
+      source: System
+    parameterMaps:
+    - name: value
+      value: US
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: obHMctki2025S-C7P_Qc8w
+    comments: Entering address
+    enabled: true
+    invertResult: false
+    order: 10
+    repeat: 1
+    type: Action
+    elementId: alZcsbrU-0GL4GW7GuWUow
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 6f94fdaa-0041-4265-b73b-ecfcbe702d66
+      source: System
+    parameterMaps:
+    - name: keys
+      value: Washington DC, The White House
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: QYdvBtIDEEyl0MmN83dgYA
+    comments: Entering email
+    enabled: true
+    invertResult: false
+    order: 11
+    repeat: 1
+    type: Action
+    elementId: ghMjgEadPESd6UbPDigz1w
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 6f94fdaa-0041-4265-b73b-ecfcbe702d66
+      source: System
+    parameterMaps:
+    - name: keys
+      value: mr.president@thewhitehouse.gov
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: L57K8faH2kyVIwCnAinHLg
+    comments: Entering phone number
+    enabled: true
+    invertResult: false
+    order: 12
+    repeat: 1
+    type: Action
+    elementId: 7Tak_rEJoUeJZGgYwQvs_A
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 6f94fdaa-0041-4265-b73b-ecfcbe702d66
+      source: System
+    parameterMaps:
+    - name: keys
+      value: +202-123-456-789
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: 8a4wfU3OdECY6An9Mtt7vA
+    comments: Saving the form
+    enabled: true
+    invertResult: false
+    order: 13
+    repeat: 1
+    type: Action
+    elementId: sK_1UquIrEe7th316HZM6Q
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 02d572b2-d610-4700-9ad3-40076ddb9807
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  - id: Tp6tP55JEUWEH81_xfEWcw
+    comments: Validating the info was saved
+    enabled: true
+    invertResult: false
+    order: 14
+    repeat: 1
+    type: Action
+    elementId: skT2uFpPME2xBHZ1B8CRYA
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 5e4cb36f-7757-4d63-8216-ba4e69496416
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  - id: L5MqjFepA027d8CuG_JIlA
+    comments: Logging out
+    enabled: true
+    invertResult: false
+    order: 15
+    repeat: 1
+    type: Action
+    elementId: m0aL6AX3i0G0EyNF-HdeeQ
+    settings:
+      sleepTime: 3000
+      timeout: -1
+      sleepTiming: Before
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 02d572b2-d610-4700-9ad3-40076ddb9807
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  - id: wYjLComnwUSBJfR0GPU4zg
+    comments: Validating successful logout
+    enabled: true
+    invertResult: false
+    order: 16
+    repeat: 1
+    type: Action
+    elementId: 4BJgGBvybEm2IQLvxynX3Q
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 5e4cb36f-7757-4d63-8216-ba4e69496416
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  parameters:
+  - name: Password
+    description: The password
+    value: 12345
+    type: Input
+  - name: Name
+    description: User full name
+    value: John Doe
+    type: Input
+  - name: ApplicationURL
+    description: Auto generated application URL parameter
+    value: https://example.testproject.io/web/
+    type: Input
+auxTests: []
+elements:
+- id: YfGUkss7k0WRcdfG2iy0_A
+  name: Full Name
+  description: Full name input
+  type:
+    id: jUwODgyNjAyNzk2NTk1NDY
+    name: Textbox
+    source: System
+  locators:
+  - name: ID
+    value: name
+    priority: 0
+- id: QZHtJUtAe0aCYVW3NDkPQw
+  name: Password
+  description: Password input
+  type:
+    id: jUwODgyNjAyNzk2NTk1NDY
+    name: Textbox
+    source: System
+  locators:
+  - name: ID
+    value: password
+    priority: 0
+- id: 4BJgGBvybEm2IQLvxynX3Q
+  name: Login
+  description: Login button
+  type:
+    id: jUwODgyNjAyNzk2NTk1NDc
+    name: Button
+    source: System
+  locators:
+  - name: ID
+    value: login
+    priority: 0
+- id: m0aL6AX3i0G0EyNF-HdeeQ
+  name: Logout
+  description: Logout button
+  type:
+    id: jUwODgyNjAyNzk2NTk1NDc
+    name: Button
+    source: System
+  locators:
+  - name: ID
+    value: logout
+    priority: 0
+- id: ziZh-m39kkWua5tGPofxUQ
+  name: Greetings Label
+  description: Greetings label
+  type:
+    id: jUwODgyNjAyNzk2NTk1NTM
+    name: Paragraph
+    source: System
+  locators:
+  - name: ID
+    value: greetings
+    priority: 0
+- id: fduKCtriiU-eW5ZPib7JHQ
+  name: Country List
+  description: Country drop-down list
+  type:
+    id: jUwODgyNjAyNzk2NTk1NjQ
+    name: Select
+    source: System
+  locators:
+  - name: ID
+    value: country
+    priority: 0
+- id: alZcsbrU-0GL4GW7GuWUow
+  name: Address
+  description: Address input
+  type:
+    id: jUwODgyNjAyNzk2NTk1NDY
+    name: Textbox
+    source: System
+  locators:
+  - name: ID
+    value: address
+    priority: 0
+- id: ghMjgEadPESd6UbPDigz1w
+  name: Email
+  description: Email input
+  type:
+    id: jUwODgyNjAyNzk2NTk1NDY
+    name: Textbox
+    source: System
+  locators:
+  - name: ID
+    value: email
+    priority: 0
+- id: 7Tak_rEJoUeJZGgYwQvs_A
+  name: Phone
+  description: Phone input
+  type:
+    id: jUwODgyNjAyNzk2NTk1NDY
+    name: Textbox
+    source: System
+  locators:
+  - name: ID
+    value: phone
+    priority: 0
+- id: sK_1UquIrEe7th316HZM6Q
+  name: Save
+  description: Save button
+  type:
+    id: jUwODgyNjAyNzk2NTk1NDc
+    name: Button
+    source: System
+  locators:
+  - name: ID
+    value: save
+    priority: 0
+- id: skT2uFpPME2xBHZ1B8CRYA
+  name: Save Label
+  description: Save label
+  type:
+    id: jUwODgyNjAyNzk2NTk2MjA
+    name: header
+    source: System
+  locators:
+  - name: XPATH
+    value: //*[@id='saved']
+    priority: 0
+projectParameters: []
+addons: []
