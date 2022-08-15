@@ -1,7 +1,7 @@
-id: d6X7ySgtK06v1hINcC5MyQ
+id: ig6bxxi8sU-CBFUFLigHAw
 projectId: _nOC1sdL70C-220oRRIwhQ
 projectName: My first Project
-created: 2022-08-15T21:32:02.4653332Z
+created: 2022-08-15T21:36:36.9619723Z
 protocol: 1
 tests:
 - id: k3LQdXsr-UaezXzIenRN6w
@@ -12,7 +12,7 @@ tests:
   driverType: Chrome
   version: 0.1
   creationDate: 2022-08-15T19:03:57.0000000
-  modificationDate: 2022-08-15T21:26:51.0000000
+  modificationDate: 2022-08-15T21:36:09.0000000
   settings:
     automationAssistant: true
     appId: yV7ZSXSNKUaT3Aj6ecIQ0g
@@ -80,13 +80,13 @@ tests:
     conditions: []
     validations: []
     contexts: []
-  - id: wjTZvXJmiEmS0WauoYmEPA
+  - id: WdzkLZCs20i0FRZdxk0bvA
     comments: ''
     enabled: true
     invertResult: false
     order: 3
     repeat: 1
-    type: Addon
+    type: Action
     elementId: PD92IHvvp0KXTG9cSfePDg
     settings:
       sleepTime: -1
@@ -95,18 +95,18 @@ tests:
       failureBehaviorType: Inherit
       takeScreenshotConditionType: Inherit
     action:
-      id: DvmyABJEKEOo2-2rlbbNvg
-      source: Store
-      addonId: inW2AJJ04ku45E9-RN2zqA
+      id: 225caec3-3231-45d5-a3f3-c4c59b7ab385
+      source: System
     parameterMaps:
     - name: text
       value: ''
       direction: Output
-    - name: timeout
-      value: 30
-      direction: Input
     conditions: []
-    validations: []
+    validations:
+    - type: Equals
+      invert: false
+      field: text
+      value: 1
     contexts: []
   parameters:
   - name: ApplicationURL
@@ -130,12 +130,6 @@ elements:
   - name: XPATH
     value: //pre[. = '{"status":"1","message":"OK","result":{"status":"1"}}']
     priority: 0
-  - name: XPATH
-    value: //pre
-    priority: 1
-  - name: XPATH
-    value: /html/body/pre
-    priority: 2
 projectParameters: []
 addons:
 - id: Xey4bVsJQEODIUN7ssaJMg
@@ -151,16 +145,3 @@ addons:
   sdkGeneration: 1
   language: Java
   hash: 2D35A7CE404CDBD8C628208C7BF6C79678E47DC6F249518E97AC68E19F0A0B6D
-- id: inW2AJJ04ku45E9-RN2zqA
-  source: Store
-  version: 2.10
-  actions:
-  - id: DvmyABJEKEOo2-2rlbbNvg
-    name: Get text (if visible)
-    description: Get text from {{element}} if it's visible
-    className: io.testproject.addon.GetTextActions.GetTextIfVisibleWeb
-  minSdkLevel: 2
-  minSdkVersion: 0.65.0
-  sdkGeneration: 1
-  language: Java
-  hash: CB217F4B750B6C3441DDB87E262A5C710BB3891BAE1F68FFF01CF07AEB036675
