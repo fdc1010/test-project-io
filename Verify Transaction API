@@ -1,7 +1,7 @@
-id: Xx6Xc62im0GDz2QDwRuA9A
+id: ljmB1Von9k2Z5D-bwo9sNA
 projectId: _nOC1sdL70C-220oRRIwhQ
 projectName: My first Project
-created: 2022-08-15T19:56:57.2496131Z
+created: 2022-08-15T20:01:15.1609126Z
 protocol: 1
 tests:
 - id: k3LQdXsr-UaezXzIenRN6w
@@ -12,7 +12,7 @@ tests:
   driverType: Chrome
   version: 0.1
   creationDate: 2022-08-15T19:03:57.0000000
-  modificationDate: 2022-08-15T19:48:28.0000000
+  modificationDate: 2022-08-15T20:00:50.0000000
   settings:
     automationAssistant: true
     appId: yV7ZSXSNKUaT3Aj6ecIQ0g
@@ -72,7 +72,7 @@ tests:
       value: window.location.href="https://api.polygonscan.com/api?module=transaction&action=gettxreceiptstatus&apikey=3EDFD3TUCY18KNQMB8SMQKBAMDDFMGXU45&txhash={{TXHASH}}";
       direction: Input
     - name: args
-      value: ''
+      value: '{{TXHASH}}'
       direction: Input
     - name: output
       value: ''
