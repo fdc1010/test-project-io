@@ -1,0 +1,611 @@
+id: 4wWMSDJcEUG-d2gA2Rf2Uw
+projectId: _nOC1sdL70C-220oRRIwhQ
+projectName: My first Project
+created: 2022-08-15T16:19:56.0487155Z
+protocol: 1
+tests:
+- id: 5BkS5R6oSkufmq8-EX1VXw
+  name: Adding Verified Contract Address
+  description: Adding Verified Contract Address (Extended Verification)
+  platform: Web
+  type: Web
+  driverType: Chrome
+  version: 0.1
+  creationDate: 2022-08-15T12:59:38.0000000
+  modificationDate: 2022-08-15T12:59:50.0000000
+  settings:
+    automationAssistant: true
+    appId: Jt1OWHNxF06jK6_4MrsC1A
+    stepSleepTime: 500
+    stepTimeout: 15000
+    stepSleepTiming: Before
+    stepFailureBehaviorType: Abort
+    stepTakeScreenshotConditionType: Failure
+  application:
+    id: Jt1OWHNxF06jK6_4MrsC1A
+    androidActivity: ''
+    appleBundleId: ''
+    androidPackage: ''
+    name: Add Verified Contract Address
+    url: https://coinmarketcap.com/currencies/permission-coin/
+    platform: Web
+  steps:
+  - id: MjhpE9d_JkyXayQLr5bghw
+    comments: Navigates the specified URL (Auto-generated)
+    enabled: true
+    invertResult: false
+    order: 1
+    repeat: 1
+    type: Action
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 49c5d8d8-4ba8-42f0-823d-702e6acfb23a
+      source: System
+    parameterMaps:
+    - name: url
+      value: '{{ApplicationURL}}'
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: 2pPKUjRIV0eW58i7uo9kvA
+    comments: Click contract address/hash text/link will navigate you to polygonscan token permission page
+    enabled: true
+    invertResult: false
+    order: 2
+    repeat: 1
+    type: Addon
+    elementId: WyLK7YWF-EGXuPbLICxQow
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 7i7ugpUNpkej4ZOFJYYMcw
+      source: Store
+      addonId: Xey4bVsJQEODIUN7ssaJMg
+    parameterMaps:
+    - name: attributeName
+      value: href
+      direction: Input
+    - name: attributeValue
+      value: '{{ContractAddress}}'
+      direction: Output
+    conditions: []
+    validations: []
+    contexts: []
+  - id: DlMLFb5AMU62Nj6D7YTIGg
+    enabled: true
+    invertResult: false
+    order: 3
+    repeat: 1
+    type: Action
+    elementId: WyLK7YWF-EGXuPbLICxQow
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 02d572b2-d610-4700-9ad3-40076ddb9807
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  - id: PcqU0w6aoEunzFEo-1DCTQ
+    enabled: true
+    invertResult: false
+    order: 4
+    repeat: 1
+    type: Action
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 3a7a12fb-66a4-47c2-aaf0-deeb7b1f748a
+      source: System
+    parameterMaps:
+    - name: index
+      value: 1
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: XR9GoHqT90We8k8ET0G1Rw
+    comments: Navigate to Polygonscan Token Page
+    enabled: true
+    invertResult: false
+    order: 5
+    repeat: 1
+    type: Action
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 49c5d8d8-4ba8-42f0-823d-702e6acfb23a
+      source: System
+    parameterMaps:
+    - name: url
+      value: '{{ContractAddress}}'
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: zlu-sIjL1EGNrEz04HKDEg
+    comments: Retrieve Token
+    enabled: true
+    invertResult: false
+    order: 6
+    repeat: 1
+    type: Action
+    elementId: n04oFB6TwkixsM0ZmvGn-g
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 225caec3-3231-45d5-a3f3-c4c59b7ab385
+      source: System
+    parameterMaps:
+    - name: text
+      value: '{{TokenToVerify}}'
+      direction: Output
+    conditions: []
+    validations: []
+    contexts: []
+  - id: xU4-Z-ddy0W_24Xb28UyrA
+    comments: Login to Polygonscan Site
+    enabled: true
+    invertResult: false
+    order: 7
+    repeat: 1
+    type: Addon
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: _SyD8iSvpUK9e-ns9-f_5Q
+      source: Store
+      addonId: fmkPgCG_u02qGoUNZqOrJQ
+    parameterMaps:
+    - name: url
+      value: '{{PolygonscanUrl}}'
+      direction: Input
+    - name: username
+      value: '{{Username}}'
+      direction: Input
+    - name: password
+      value: '{{Password}}'
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: SErlRbXBlUKC0Elt5AhiyQ
+    enabled: true
+    invertResult: false
+    order: 8
+    repeat: 1
+    type: Action
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 49c5d8d8-4ba8-42f0-823d-702e6acfb23a
+      source: System
+    parameterMaps:
+    - name: url
+      value: '{{PolygonscanVerifyContractUrl}}'
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: vEvruWf9HUie5YivoaYnzQ
+    enabled: true
+    invertResult: false
+    order: 9
+    repeat: 1
+    type: Action
+    elementId: F_7QQvVC3EWoHNN_H9KGtw
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 02d572b2-d610-4700-9ad3-40076ddb9807
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  - id: Qz8TzVleE0mCs4IOF9GuLw
+    enabled: true
+    invertResult: false
+    order: 10
+    repeat: 1
+    type: Action
+    elementId: F_7QQvVC3EWoHNN_H9KGtw
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 6f94fdaa-0041-4265-b73b-ecfcbe702d66
+      source: System
+    parameterMaps:
+    - name: keys
+      value: 0xaA3717090CDDc9B227e49d0D84A28aC0a996e6Ff
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: 6tfP7M09qUyUgf0XsO_XrA
+    enabled: true
+    invertResult: false
+    order: 11
+    repeat: 1
+    type: Action
+    elementId: pn9y6pLTPUeHTnpWSv657Q
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 45fdd921-b359-4d6a-b7c5-5f9a3612c0f2
+      source: System
+    parameterMaps:
+    - name: value
+      value: 1
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: 1gRQ_Sj2g0aRRNmcCv0KHQ
+    enabled: true
+    invertResult: false
+    order: 12
+    repeat: 1
+    type: Action
+    elementId: pn9y6pLTPUeHTnpWSv657Q
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 02d572b2-d610-4700-9ad3-40076ddb9807
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  - id: qWtSQQgOtkWBGKMyel683w
+    enabled: true
+    invertResult: false
+    order: 13
+    repeat: 1
+    type: Action
+    elementId: 4ODTkUnPLkmGiZYc4URHUA
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 45fdd921-b359-4d6a-b7c5-5f9a3612c0f2
+      source: System
+    parameterMaps:
+    - name: value
+      value: v0.8.16+commit.07a7930e
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: qfYVyBgJ10SKB0c6KVa4Ew
+    enabled: true
+    invertResult: false
+    order: 14
+    repeat: 1
+    type: Action
+    elementId: 4ODTkUnPLkmGiZYc4URHUA
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 02d572b2-d610-4700-9ad3-40076ddb9807
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  - id: K_NSLDb_J0SS-6bCyOnJxA
+    enabled: true
+    invertResult: false
+    order: 15
+    repeat: 1
+    type: Action
+    elementId: jo4x-5LmDkuTXyIRKgJolA
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 45fdd921-b359-4d6a-b7c5-5f9a3612c0f2
+      source: System
+    parameterMaps:
+    - name: value
+      value: 1
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: LVtta7hJ7k23lAzIgYPNDA
+    enabled: true
+    invertResult: false
+    order: 16
+    repeat: 1
+    type: Action
+    elementId: jo4x-5LmDkuTXyIRKgJolA
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 02d572b2-d610-4700-9ad3-40076ddb9807
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  - id: Cm3JNtikDk2B11fR73X4DQ
+    enabled: true
+    invertResult: false
+    order: 17
+    repeat: 1
+    type: Action
+    elementId: 2Ko4wr62Yku0YKds5pWdxw
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 02d572b2-d610-4700-9ad3-40076ddb9807
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  parameters:
+  - name: PolygonscanVerifyContractUrl
+    description: ''
+    value: https://polygonscan.com/verifyContract
+    type: Input
+  - name: HoldUsernameValue
+    description: ''
+    value: ''
+    type: Output
+  - name: Password
+    description: ''
+    type: Input
+  - name: Username
+    description: ''
+    type: Input
+  - name: PolygonscanUrl
+    description: ''
+    value: https://polygonscan.com/
+    type: Input
+  - name: TokenToVerify
+    description: ''
+    value: ''
+    type: Output
+  - name: ContractAddress
+    description: Contract Address/Token/Hash retrieved from call get address method
+    value: ''
+    type: Output
+  - name: ApplicationURL
+    description: Auto generated application URL parameter
+    value: https://coinmarketcap.com/currencies/permission-coin/
+    type: Input
+auxTests: []
+elements:
+- id: WyLK7YWF-EGXuPbLICxQow
+  name: PolygonContractAddressLink
+  description: ''
+  type:
+    id: jUwODgyNjAyNzk2NTk1NTE
+    name: Link
+    source: System
+  locators:
+  - name: XPATH
+    value: //div[2]/div/a[@href = 'https://polygonscan.com/token/0xaA3717090CDDc9B227e49d0D84A28aC0a996e6Ff']
+    priority: 0
+  - name: XPATH
+    value: /html/body/div[1]/div/div[1]/div[2]/div/div[1]/div[2]/div/div[5]/div/div[3]/div[2]/div/a
+    priority: 3
+  - name: XPATH
+    value: //div[3]/div[2]/div/a
+    priority: 2
+  - name: XPATH
+    value: //div[2]/div/a[. = 'Polygon0xaA37...996e6Ff']
+    priority: 1
+- id: n04oFB6TwkixsM0ZmvGn-g
+  name: PolygonscanToken
+  type:
+    id: jUwODgyNjAyNzk2NTk1NTE
+    name: Link
+    source: System
+  locators:
+  - name: XPATH
+    value: /html/body/div[1]/main/div[4]/div[1]/div[2]/div/div[2]/div[1]/div[2]/div/a[1]
+    priority: 2
+  - name: XPATH
+    value: //div[2]/div[1]/div[2]/div/a[1]
+    priority: 1
+  - name: XPATH
+    value: //a[. = '0xaA3717090CDDc9B227e49d0D84A28aC0a996e6Ff']
+    priority: 0
+- id: F_7QQvVC3EWoHNN_H9KGtw
+  name: ctl00$ContentPlaceHolder1$txtContract...
+  type:
+    id: jUwODgyNjAyNzk2NTk1NDY
+    name: Textbox
+    source: System
+  locators:
+  - name: XPATH
+    value: /html/body/div[1]/main/div/div/div[2]/div/form/div[3]/div[1]/input
+    priority: 4
+  - name: XPATH
+    value: //div/div[1]/input
+    priority: 0
+  - name: XPATH
+    value: //input[@placeholder = '(0x...)']
+    priority: 2
+  - name: CSSSELECTOR
+    value: "[name='ctl00$ContentPlaceHolder1$txtContractAddress']"
+    priority: 1
+  - name: CSSSELECTOR
+    value: '#ContentPlaceHolder1_txtContractAddress'
+    priority: 3
+- id: pn9y6pLTPUeHTnpWSv657Q
+  name: ctl00$ContentPlaceHolder1$ddlCompiler...
+  type:
+    id: jUwODgyNjAyNzk2NTk1NjQ
+    name: Select
+    source: System
+  locators:
+  - name: XPATH
+    value: /html/body/div[1]/main/div/form/div[4]/div[2]/div[2]/select
+    priority: 3
+  - name: XPATH
+    value: //div[2]/select
+    priority: 2
+  - name: CSSSELECTOR
+    value: "[name='ctl00$ContentPlaceHolder1$ddlCompilerType']"
+    priority: 1
+  - name: CSSSELECTOR
+    value: '#ContentPlaceHolder1_ddlCompilerType'
+    priority: 0
+- id: 4ODTkUnPLkmGiZYc4URHUA
+  name: ctl00$ContentPlaceHolder1$ddlCompiler...1
+  type:
+    id: jUwODgyNjAyNzk2NTk1NjQ
+    name: Select
+    source: System
+  locators:
+  - name: XPATH
+    value: /html/body/div[1]/main/div/form/div[4]/div[2]/span[1]/div[1]/select
+    priority: 3
+  - name: XPATH
+    value: //span[1]//select
+    priority: 2
+  - name: CSSSELECTOR
+    value: "[name='ctl00$ContentPlaceHolder1$ddlCompilerVersions']"
+    priority: 1
+  - name: CSSSELECTOR
+    value: '#ContentPlaceHolder1_ddlCompilerVersions'
+    priority: 0
+- id: jo4x-5LmDkuTXyIRKgJolA
+  name: ctl00$ContentPlaceHolder1$ddlLicenseT...
+  type:
+    id: jUwODgyNjAyNzk2NTk1NjQ
+    name: Select
+    source: System
+  locators:
+  - name: XPATH
+    value: /html/body/div[1]/main/div/form/div[4]/div[2]/span[2]/div/select
+    priority: 3
+  - name: XPATH
+    value: //span[2]//select
+    priority: 2
+  - name: CSSSELECTOR
+    value: "[name='ctl00$ContentPlaceHolder1$ddlLicenseType']"
+    priority: 1
+  - name: CSSSELECTOR
+    value: '#ContentPlaceHolder1_ddlLicenseType'
+    priority: 0
+- id: 2Ko4wr62Yku0YKds5pWdxw
+  name: ctl00$ContentPlaceHolder1$btnSubmit
+  type:
+    id: jUwODgyNjAyNzk2NTk1NDc
+    name: Button
+    source: System
+  locators:
+  - name: CSSSELECTOR
+    value: "[name='ctl00$ContentPlaceHolder1$btnSubmit']"
+    priority: 1
+  - name: CSSSELECTOR
+    value: '#ContentPlaceHolder1_btnSubmit'
+    priority: 0
+  - name: XPATH
+    value: //p/input[1]
+    priority: 2
+  - name: XPATH
+    value: /html/body/div[1]/main/div/form/div[4]/div[2]/p/input[1]
+    priority: 3
+projectParameters: []
+addons:
+- id: Xey4bVsJQEODIUN7ssaJMg
+  source: Store
+  version: 1.1.9
+  actions:
+  - id: 7i7ugpUNpkej4ZOFJYYMcw
+    name: Get attribute value
+    description: Get {{attributeName}} attribute value on {{element}}
+    className: io.testproject.addons.web.element.GetElementAttribute
+  minSdkLevel: 2
+  minSdkVersion: 0.63.1
+  sdkGeneration: 1
+  language: Java
+  hash: 2D35A7CE404CDBD8C628208C7BF6C79678E47DC6F249518E97AC68E19F0A0B6D
+- id: fmkPgCG_u02qGoUNZqOrJQ
+  source: Store
+  version: 0.1
+  actions:
+  - id: _SyD8iSvpUK9e-ns9-f_5Q
+    name: Navigate to URL with Basic Authentication
+    description: Navigate to a URL that required basic authentication
+    className: NavigateToBasicAuth
+  minSdkLevel: 2
+  minSdkVersion: 0.63.0
+  sdkGeneration: 1
+  language: Java
+  hash: 28F5C774A735C5F24BD9EB877785916E30D67C811900AC2935E97B4D2D7E79D3

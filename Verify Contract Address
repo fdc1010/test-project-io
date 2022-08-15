@@ -1,0 +1,266 @@
+id: H2Zny9HF8EylgLc6U6ZDww
+projectId: _nOC1sdL70C-220oRRIwhQ
+projectName: My first Project
+created: 2022-08-15T16:19:56.0487912Z
+protocol: 1
+tests:
+- id: xZRqGTX6V0CE6nXZFA1Jbg
+  name: Verify Contract Address
+  description: Go to https://coinmarketcap.com/ and verify contract address against polyscan https://coinmarketcap.com/ https://polygonscan.com/) contract address
+  platform: Web
+  type: Web
+  driverType: Chrome
+  version: 0.1
+  creationDate: 2022-08-15T13:00:19.0000000
+  modificationDate: 2022-08-15T13:00:54.0000000
+  settings:
+    automationAssistant: true
+    appId: fXenHRBTg0mN6HdXw0c_bQ
+    stepSleepTime: 500
+    stepTimeout: 15000
+    stepSleepTiming: Before
+    stepFailureBehaviorType: Abort
+    stepTakeScreenshotConditionType: Failure
+  application:
+    id: fXenHRBTg0mN6HdXw0c_bQ
+    androidActivity: ''
+    appleBundleId: ''
+    androidPackage: ''
+    name: Verify Contract Address
+    url: https://coinmarketcap.com/currencies/permission-coin/
+    platform: Web
+  steps:
+  - id: 8iHdu4CVm0eJR9NseGseAQ
+    comments: Navigates the specified URL (Auto-generated)
+    enabled: true
+    invertResult: false
+    order: 1
+    repeat: 1
+    type: Action
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 49c5d8d8-4ba8-42f0-823d-702e6acfb23a
+      source: System
+    parameterMaps:
+    - name: url
+      value: '{{ApplicationURL}}'
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: z1jT6RdFoUqsrL3ogIIacg
+    comments: Click contract address/hash text/link will navigate you to polygonscan token permission page
+    enabled: true
+    invertResult: false
+    order: 2
+    repeat: 1
+    type: Addon
+    elementId: F8W44bfxK0yrDeM07yCPHQ
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 7i7ugpUNpkej4ZOFJYYMcw
+      source: Store
+      addonId: Xey4bVsJQEODIUN7ssaJMg
+    parameterMaps:
+    - name: attributeName
+      value: href
+      direction: Input
+    - name: attributeValue
+      value: '{{ContractAddress}}'
+      direction: Output
+    conditions: []
+    validations: []
+    contexts: []
+  - id: u2B_ETEKrE-R6MWdvhxOkw
+    enabled: true
+    invertResult: false
+    order: 3
+    repeat: 1
+    type: Action
+    elementId: F8W44bfxK0yrDeM07yCPHQ
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 02d572b2-d610-4700-9ad3-40076ddb9807
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  - id: 3Xm8mVA9qkKlrtEpO4yi0Q
+    enabled: true
+    invertResult: false
+    order: 4
+    repeat: 1
+    type: Action
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 3a7a12fb-66a4-47c2-aaf0-deeb7b1f748a
+      source: System
+    parameterMaps:
+    - name: index
+      value: 1
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: hTpajvX1kUyE8cgHBW-5WQ
+    comments: Navigate to Polygonscan Token Page
+    enabled: true
+    invertResult: false
+    order: 5
+    repeat: 1
+    type: Action
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 49c5d8d8-4ba8-42f0-823d-702e6acfb23a
+      source: System
+    parameterMaps:
+    - name: url
+      value: '{{ContractAddress}}'
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: ls6PNLSTu0KfRbRQ-oIsSA
+    comments: Retrieve Token
+    enabled: true
+    invertResult: false
+    order: 6
+    repeat: 1
+    type: Action
+    elementId: ydzJNgtDbEeCJ0aFT7QjQw
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 225caec3-3231-45d5-a3f3-c4c59b7ab385
+      source: System
+    parameterMaps:
+    - name: text
+      value: '{{TokenToVerify}}'
+      direction: Output
+    conditions: []
+    validations: []
+    contexts: []
+  - id: KIWH1NFFGkO5p4tyOaojOA
+    comments: Verify Contract Address
+    enabled: true
+    invertResult: false
+    order: 7
+    repeat: 1
+    type: Action
+    elementId: ydzJNgtDbEeCJ0aFT7QjQw
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 225caec3-3231-45d5-a3f3-c4c59b7ab385
+      source: System
+    parameterMaps:
+    - name: text
+      value: '{{TokenToVerify}}'
+      direction: Output
+    conditions: []
+    validations:
+    - type: Contains
+      invert: false
+      field: text
+      value: '{{ContractAddress}}'
+    contexts: []
+  parameters:
+  - name: ApplicationURL
+    description: Auto generated application URL parameter
+    value: https://coinmarketcap.com/currencies/permission-coin/
+    type: Input
+  - name: ContractAddress
+    description: Contract Address/Token/Hash retrieved from call get address method
+    value: ''
+    type: Output
+  - name: TokenToVerify
+    description: ''
+    value: ''
+    type: Output
+auxTests: []
+elements:
+- id: F8W44bfxK0yrDeM07yCPHQ
+  name: PolygonContractAddressLink
+  description: ''
+  type:
+    id: jUwODgyNjAyNzk2NTk1NTE
+    name: Link
+    source: System
+  locators:
+  - name: XPATH
+    value: //div[2]/div/a[@href = 'https://polygonscan.com/token/0xaA3717090CDDc9B227e49d0D84A28aC0a996e6Ff']
+    priority: 0
+  - name: XPATH
+    value: //div[2]/div/a[. = 'Polygon0xaA37...996e6Ff']
+    priority: 1
+  - name: XPATH
+    value: //div[3]/div[2]/div/a
+    priority: 2
+  - name: XPATH
+    value: /html/body/div[1]/div/div[1]/div[2]/div/div[1]/div[2]/div/div[5]/div/div[3]/div[2]/div/a
+    priority: 3
+- id: ydzJNgtDbEeCJ0aFT7QjQw
+  name: PolygonscanToken
+  type:
+    id: jUwODgyNjAyNzk2NTk1NTE
+    name: Link
+    source: System
+  locators:
+  - name: XPATH
+    value: //a[. = '0xaA3717090CDDc9B227e49d0D84A28aC0a996e6Ff']
+    priority: 0
+  - name: XPATH
+    value: //div[2]/div[1]/div[2]/div/a[1]
+    priority: 1
+  - name: XPATH
+    value: /html/body/div[1]/main/div[4]/div[1]/div[2]/div/div[2]/div[1]/div[2]/div/a[1]
+    priority: 2
+projectParameters: []
+addons:
+- id: Xey4bVsJQEODIUN7ssaJMg
+  source: Store
+  version: 1.1.9
+  actions:
+  - id: 7i7ugpUNpkej4ZOFJYYMcw
+    name: Get attribute value
+    description: Get {{attributeName}} attribute value on {{element}}
+    className: io.testproject.addons.web.element.GetElementAttribute
+  minSdkLevel: 2
+  minSdkVersion: 0.63.1
+  sdkGeneration: 1
+  language: Java
+  hash: 2D35A7CE404CDBD8C628208C7BF6C79678E47DC6F249518E97AC68E19F0A0B6D

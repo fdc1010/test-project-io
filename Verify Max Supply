@@ -1,0 +1,448 @@
+id: 0Mk3JyEpGEWKO5ri5HcH6w
+projectId: _nOC1sdL70C-220oRRIwhQ
+projectName: My first Project
+created: 2022-08-15T16:19:56.0486358Z
+protocol: 1
+tests:
+- id: kqUUHPbHB0u36eZmu0xmcg
+  name: Verify Max Supply
+  description: Verify Max Supply
+  platform: Web
+  type: Web
+  driverType: Chrome
+  version: 0.1
+  creationDate: 2022-08-15T12:59:17.0000000
+  modificationDate: 2022-08-15T12:59:58.0000000
+  settings:
+    automationAssistant: true
+    appId: fXenHRBTg0mN6HdXw0c_bQ
+    stepSleepTime: 500
+    stepTimeout: 15000
+    stepSleepTiming: Before
+    stepFailureBehaviorType: Abort
+    stepTakeScreenshotConditionType: Failure
+  application:
+    id: fXenHRBTg0mN6HdXw0c_bQ
+    androidActivity: ''
+    appleBundleId: ''
+    androidPackage: ''
+    name: Verify Contract Address
+    url: https://coinmarketcap.com/currencies/permission-coin/
+    platform: Web
+  steps:
+  - id: tIyXb_6PT0GoiuG8o_x1bg
+    comments: Navigates the specified URL (Auto-generated)
+    enabled: true
+    invertResult: false
+    order: 1
+    repeat: 1
+    type: Action
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 49c5d8d8-4ba8-42f0-823d-702e6acfb23a
+      source: System
+    parameterMaps:
+    - name: url
+      value: '{{ApplicationURL}}'
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: ghFeCTulLEaCDxpxf480iA
+    comments: Click contract address/hash text/link will navigate you to polygonscan token permission page
+    enabled: true
+    invertResult: false
+    order: 2
+    repeat: 1
+    type: Addon
+    elementId: I328t-xiMk-fQUFr2K7A8A
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 7i7ugpUNpkej4ZOFJYYMcw
+      source: Store
+      addonId: Xey4bVsJQEODIUN7ssaJMg
+    parameterMaps:
+    - name: attributeName
+      value: href
+      direction: Input
+    - name: attributeValue
+      value: '{{ContractAddress}}'
+      direction: Output
+    conditions: []
+    validations: []
+    contexts: []
+  - id: 04zAT1YzyUy_ZBbnvPR6Cg
+    enabled: true
+    invertResult: false
+    order: 3
+    repeat: 1
+    type: Action
+    elementId: I328t-xiMk-fQUFr2K7A8A
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 02d572b2-d610-4700-9ad3-40076ddb9807
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  - id: 45RXNimZukSjr5kdhl-Vyw
+    enabled: true
+    invertResult: false
+    order: 4
+    repeat: 1
+    type: Action
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 3a7a12fb-66a4-47c2-aaf0-deeb7b1f748a
+      source: System
+    parameterMaps:
+    - name: index
+      value: 1
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: VoZZ74JrvEqWIaWVBnqF7A
+    comments: Navigate to Polygonscan Token Page
+    enabled: true
+    invertResult: false
+    order: 5
+    repeat: 1
+    type: Action
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 49c5d8d8-4ba8-42f0-823d-702e6acfb23a
+      source: System
+    parameterMaps:
+    - name: url
+      value: '{{ContractAddress}}'
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: cEVX-OCK40WJ2gla3RqF5w
+    enabled: true
+    invertResult: false
+    order: 6
+    repeat: 1
+    type: Action
+    elementId: Ndlg3JpJ7keLZLJP7mFzMA
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 02d572b2-d610-4700-9ad3-40076ddb9807
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  - id: hRnAFxCVTESjs5Puw7zcwA
+    enabled: true
+    invertResult: false
+    order: 7
+    repeat: 1
+    type: Action
+    elementId: uYFRMOIja0qteJ415Sgcow
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 02d572b2-d610-4700-9ad3-40076ddb9807
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts:
+    - order: 0
+      locatorType: XPATH
+      locatorValue: //*[@id = 'readcontractiframe']|/html/body/div[1]/main/div[4]/div[3]/div[2]/div/div[9]/div[2]/div[2]/iframe
+  - id: Yl3t3xIt3UCfVbNb31yvOQ
+    comments: ''
+    enabled: true
+    invertResult: false
+    order: 8
+    repeat: 1
+    type: Addon
+    elementId: uYFRMOIja0qteJ415Sgcow
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 7i7ugpUNpkej4ZOFJYYMcw
+      source: Store
+      addonId: Xey4bVsJQEODIUN7ssaJMg
+    parameterMaps:
+    - name: attributeName
+      value: 'href '
+      direction: Input
+    - name: attributeValue
+      value: '{{PolygonscanWeiUrl}}'
+      direction: Output
+    conditions: []
+    validations: []
+    contexts:
+    - order: 0
+      locatorType: XPATH
+      locatorValue: //*[@id = 'readcontractiframe']|/html/body/div[1]/main/div[4]/div[3]/div[2]/div/div[9]/div[2]/div[2]/iframe
+  - id: hx4rseTAh0ivFhBTvsVk7w
+    enabled: true
+    invertResult: false
+    order: 9
+    repeat: 1
+    type: Action
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 3a7a12fb-66a4-47c2-aaf0-deeb7b1f748a
+      source: System
+    parameterMaps:
+    - name: index
+      value: 9
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: qPRREf8xQ0CBOyCPCw-B4Q
+    comments: ''
+    enabled: true
+    invertResult: false
+    order: 10
+    repeat: 1
+    type: Action
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 49c5d8d8-4ba8-42f0-823d-702e6acfb23a
+      source: System
+    parameterMaps:
+    - name: url
+      value: '{{PolygonscanWeiUrl}}'
+      direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: UrqHGfxIz0-IbJu_0bRknw
+    enabled: true
+    invertResult: false
+    order: 11
+    repeat: 1
+    type: Action
+    elementId: s88c_IrcvUa9tLV_G-3azQ
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 02d572b2-d610-4700-9ad3-40076ddb9807
+      source: System
+    parameterMaps: []
+    conditions: []
+    validations: []
+    contexts: []
+  - id: xBIgBiNX7k6cUx2bP4gINQ
+    comments: Retrieve Max Supply
+    enabled: true
+    invertResult: false
+    order: 12
+    repeat: 1
+    type: Addon
+    elementId: OoXj4bnbFEuziCrZa4gr2Q
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 7i7ugpUNpkej4ZOFJYYMcw
+      source: Store
+      addonId: Xey4bVsJQEODIUN7ssaJMg
+    parameterMaps:
+    - name: attributeName
+      value: value
+      direction: Input
+    - name: attributeValue
+      value: '{{MaxSupplyValue}}'
+      direction: Output
+    conditions: []
+    validations: []
+    contexts: []
+  parameters:
+  - name: PolygonscanWeiUrl
+    description: ''
+    value: https://polygonscan.com/unitconverter?wei=100000000000000000000000000000
+    type: Output
+  - name: MaxSupplyValue
+    description: ''
+    value: ''
+    type: Output
+  - name: TokenToVerify
+    description: ''
+    value: ''
+    type: Output
+  - name: ContractAddress
+    description: Contract Address/Token/Hash retrieved from call get address method
+    value: ''
+    type: Output
+  - name: ApplicationURL
+    description: Auto generated application URL parameter
+    value: https://coinmarketcap.com/currencies/permission-coin/
+    type: Input
+auxTests: []
+elements:
+- id: I328t-xiMk-fQUFr2K7A8A
+  name: PolygonContractAddressLink
+  description: ''
+  type:
+    id: jUwODgyNjAyNzk2NTk1NTE
+    name: Link
+    source: System
+  locators:
+  - name: XPATH
+    value: //div[2]/div/a[@href = 'https://polygonscan.com/token/0xaA3717090CDDc9B227e49d0D84A28aC0a996e6Ff']
+    priority: 0
+  - name: XPATH
+    value: /html/body/div[1]/div/div[1]/div[2]/div/div[1]/div[2]/div/div[5]/div/div[3]/div[2]/div/a
+    priority: 3
+  - name: XPATH
+    value: //div[3]/div[2]/div/a
+    priority: 2
+  - name: XPATH
+    value: //div[2]/div/a[. = 'Polygon0xaA37...996e6Ff']
+    priority: 1
+- id: Ndlg3JpJ7keLZLJP7mFzMA
+  name: Contract
+  type:
+    id: jUwODgyNjAyNzk2NTk1NTE
+    name: Link
+    source: System
+  locators:
+  - name: XPATH
+    value: /html/body/div[1]/main/div[4]/div[3]/div[1]/ul/li[4]/a
+    priority: 2
+  - name: XPATH
+    value: //div/div[3]/div[1]/ul/li[4]/a
+    priority: 1
+  - name: XPATH
+    value: //a[. = 'Contract']
+    priority: 0
+- id: uYFRMOIja0qteJ415Sgcow
+  name: MaxSupply
+  description: ''
+  type:
+    id: jUwODgyNjAyNzk2NTk1NTE
+    name: Link
+    source: System
+  locators:
+  - name: XPATH
+    value: /html/body/div[3]/div[6]/div[2]/div/form/div/a
+    priority: 2
+  - name: XPATH
+    value: //div[6]/div[2]//a
+    priority: 1
+  - name: XPATH
+    value: //a[. = '100000000000000000000000000000']
+    priority: 0
+- id: s88c_IrcvUa9tLV_G-3azQ
+  name: linkIcon_wei
+  type:
+    id: jUwODgyNjAyNzk2NTk1NjU
+    name: span
+    source: System
+  locators:
+  - name: XPATH
+    value: /html/body/div[1]/main/div[2]/div/div/div[2]/div[1]/span/a/span
+    priority: 2
+  - name: CSSSELECTOR
+    value: '#linkIcon_wei'
+    priority: 0
+  - name: XPATH
+    value: //div[2]/div[1]/span//span
+    priority: 1
+- id: OoXj4bnbFEuziCrZa4gr2Q
+  name: MaxSupplyValue
+  description: ''
+  type:
+    id: jUwODgyNjAyNzk2NTk1NDY
+    name: Textbox
+    source: System
+  locators:
+  - name: XPATH
+    value: //input[@placeholder = 'Wei']
+    priority: 3
+  - name: CSSSELECTOR
+    value: "[name='ctl00$ContentPlaceHolder1$wei']"
+    priority: 2
+  - name: CSSSELECTOR
+    value: '#wei'
+    priority: 1
+  - name: XPATH
+    value: //input[@value = '100000000000000000000000000000']
+    priority: 0
+  - name: XPATH
+    value: //div[2]/input
+    priority: 4
+  - name: XPATH
+    value: /html/body/div[1]/main/div[2]/div/div/div[2]/input
+    priority: 5
+projectParameters: []
+addons:
+- id: Xey4bVsJQEODIUN7ssaJMg
+  source: Store
+  version: 1.1.9
+  actions:
+  - id: 7i7ugpUNpkej4ZOFJYYMcw
+    name: Get attribute value
+    description: Get {{attributeName}} attribute value on {{element}}
+    className: io.testproject.addons.web.element.GetElementAttribute
+  minSdkLevel: 2
+  minSdkVersion: 0.63.1
+  sdkGeneration: 1
+  language: Java
+  hash: 2D35A7CE404CDBD8C628208C7BF6C79678E47DC6F249518E97AC68E19F0A0B6D
