@@ -1,7 +1,7 @@
-id: ig6bxxi8sU-CBFUFLigHAw
+id: kuOk5K4LyEaaqnJnSll6kQ
 projectId: _nOC1sdL70C-220oRRIwhQ
 projectName: My first Project
-created: 2022-08-15T21:36:36.9619723Z
+created: 2022-08-23T21:55:03.4250983Z
 protocol: 1
 tests:
 - id: k3LQdXsr-UaezXzIenRN6w
@@ -12,7 +12,7 @@ tests:
   driverType: Chrome
   version: 0.1
   creationDate: 2022-08-15T19:03:57.0000000
-  modificationDate: 2022-08-15T21:36:09.0000000
+  modificationDate: 2022-08-15T22:05:42.0000000
   settings:
     automationAssistant: true
     appId: yV7ZSXSNKUaT3Aj6ecIQ0g
@@ -45,8 +45,83 @@ tests:
       source: System
     parameterMaps:
     - name: url
-      value: '{{ApplicationURL}}'
+      value: https://polygonscan.com/
       direction: Input
+    conditions: []
+    validations: []
+    contexts: []
+  - id: WdzkLZCs20i0FRZdxk0bvA
+    comments: ''
+    enabled: true
+    invertResult: false
+    order: 2
+    repeat: 1
+    type: Action
+    elementId: PD92IHvvp0KXTG9cSfePDg
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 225caec3-3231-45d5-a3f3-c4c59b7ab385
+      source: System
+    parameterMaps:
+    - name: text
+      value: ''
+      direction: Output
+    conditions: []
+    validations:
+    - type: Equals
+      invert: false
+      field: text
+      value: 1
+    contexts: []
+  - id: -hR4iGy5uECu9JpAJCgTXw
+    enabled: true
+    invertResult: false
+    order: 3
+    repeat: 1
+    type: Addon
+    elementId: PMpUcMwm40yQxcrGFqHp1A
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 7i7ugpUNpkej4ZOFJYYMcw
+      source: Store
+      addonId: Xey4bVsJQEODIUN7ssaJMg
+    parameterMaps:
+    - name: attributeName
+      value: href
+      direction: Input
+    - name: attributeValue
+      value: ''
+      direction: Output
+    conditions: []
+    validations: []
+    contexts: []
+  - id: gbOhtNxTTEy7pEKUo08jbQ
+    enabled: true
+    invertResult: false
+    order: 4
+    repeat: 1
+    type: Action
+    elementId: 2Fi16w-gtkSkxE5VqMhCmg
+    settings:
+      sleepTime: -1
+      timeout: -1
+      sleepTiming: Inherit
+      failureBehaviorType: Inherit
+      takeScreenshotConditionType: Inherit
+    action:
+      id: 02d572b2-d610-4700-9ad3-40076ddb9807
+      source: System
+    parameterMaps: []
     conditions: []
     validations: []
     contexts: []
@@ -54,7 +129,7 @@ tests:
     comments: ''
     enabled: true
     invertResult: false
-    order: 2
+    order: 5
     repeat: 1
     type: Addon
     settings:
@@ -80,14 +155,14 @@ tests:
     conditions: []
     validations: []
     contexts: []
-  - id: WdzkLZCs20i0FRZdxk0bvA
+  - id: EDF_pmeDeUyhRuYOgGS_nQ
     comments: ''
     enabled: true
     invertResult: false
-    order: 3
+    order: 6
     repeat: 1
     type: Action
-    elementId: PD92IHvvp0KXTG9cSfePDg
+    elementId: 8TvUgjxdpUe-AIvPw7zz5A
     settings:
       sleepTime: -1
       timeout: -1
@@ -99,14 +174,10 @@ tests:
       source: System
     parameterMaps:
     - name: text
-      value: ''
+      value: '{{TXHASH}}'
       direction: Output
     conditions: []
-    validations:
-    - type: Equals
-      invert: false
-      field: text
-      value: 1
+    validations: []
     contexts: []
   parameters:
   - name: ApplicationURL
@@ -116,6 +187,10 @@ tests:
   - name: TXHASH
     description: ''
     value: 0x591ca00bf6b404e24e21732023abc0416673beff9586f37e61fb0f07ca560940
+    type: Input
+  - name: VarTxh
+    description: ''
+    value: ''
     type: Input
 auxTests: []
 elements:
@@ -130,12 +205,67 @@ elements:
   - name: XPATH
     value: //pre[. = '{"status":"1","message":"OK","result":{"status":"1"}}']
     priority: 0
+- id: 2Fi16w-gtkSkxE5VqMhCmg
+  name: SpanTxHash
+  type:
+    id: jUwODgyNjAyNzk2NTk1NjU
+    name: span
+    source: System
+  locators:
+  - name: CSSSELECTOR
+    value: '#spanTxHash'
+    priority: 0
+  - name: XPATH
+    value: //span[. = '0x7141e07d2c79189b3aeca486379d4581efd3ab40f6f4653591df79d53200b19c']
+    priority: 1
+  - name: XPATH
+    value: //div[2]/div[1]/div/div[1]/div/span
+    priority: 2
+  - name: XPATH
+    value: /html/body/div[1]/main/div[3]/div[1]/div[2]/div[1]/div/div[1]/div[2]/span
+    priority: 3
+- id: PMpUcMwm40yQxcrGFqHp1A
+  name: TXHLink
+  type:
+    id: jUwODgyNjAyNzk2NTk1NTE
+    name: Link
+    source: System
+  locators:
+  - name: XPATH
+    value: //a[. = '0xe66f10fb9bdf9adba7a244cfbdc0cfae61959cfc24de4efafa039e6203b57ba1']
+    priority: 0
+  - name: XPATH
+    value: //div[2]/div/div[2]/div[1]/div/div[1]/div[1]//a
+    priority: 1
+  - name: XPATH
+    value: /html/body/div[1]/main/div/div[3]/div[2]/div/div[2]/div[1]/div/div[1]/div[1]/div/div[2]/a
+    priority: 2
+- id: 8TvUgjxdpUe-AIvPw7zz5A
+  name: spanTxHashLinkIcon
+  type:
+    id: jUwODgyNjAyNzk2NTk1NjU
+    name: span
+    source: System
+  locators:
+  - name: CSSSELECTOR
+    value: '#spanTxHashLinkIcon'
+    priority: 0
+  - name: XPATH
+    value: //div[1]/div[2]/a/span
+    priority: 1
+  - name: XPATH
+    value: /html/body/div[1]/main/div[3]/div[1]/div[2]/div[1]/div/div[1]/div[2]/a/span
+    priority: 2
 projectParameters: []
 addons:
 - id: Xey4bVsJQEODIUN7ssaJMg
   source: Store
   version: 1.1.9
   actions:
+  - id: 7i7ugpUNpkej4ZOFJYYMcw
+    name: Get attribute value
+    description: Get {{attributeName}} attribute value on {{element}}
+    className: io.testproject.addons.web.element.GetElementAttribute
   - id: SFW6Rf9DW0G4jpBW38V4xw
     name: Execute JavaScript
     description: Execute JavaScript {{code}} with arguments {{args}}
